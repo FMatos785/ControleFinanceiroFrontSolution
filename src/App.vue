@@ -24,8 +24,10 @@ export default {
 </script>
 
 <template>
-  <div class="teste col-md-2">
-    <div class="col-md-12">
+
+  <div class="structure">
+
+    <div class="structure-header">
       <Header @navegar="componente = $event" />
     </div>
 
@@ -35,13 +37,39 @@ export default {
       </KeepAlive>
       <Footer />
     </div>
+    
   </div>
+
 </template>
 
 <style >
-.teste {
-  background: red;
+.structure {
   display: flex;
+  background: var(--bk-green);
 
 }
+
+.structure-header {
+  background-color: #EDF3FB;
+  width: 100px;
+  transition: width 0.1s; /* Adicione a propriedade e duração da transição aqui */
+  transition-delay: 0.1s; /* Adicione o atraso da transição aqui */
+}
+
+.structure-header:hover {
+  width: 260px;
+}
+
+.structure-header:hover .text-header {
+  display:inline ;
+}
+
+.structure-header .text-header {
+  display: none ;
+}
+
+img{
+  width: 10px;
+}
+
 </style>

@@ -10,15 +10,28 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="oi">
         header
         <ul>
-            <li><a href="#" @click="navegarPara ('Home')">Home</a></li>
-            <li><a href="#" @click="navegarPara ('Receitas')">Receitas</a></li>
-            <li><a href="#" @click="navegarPara ('Despesas')">Despesas</a></li>
+            <li>
+                <a class="text-header" href="#" @click="navegarPara('Home')">Home</a>
+                <img src="../assets/logo.svg" alt="">
+            </li>
+            <li>
+                <a class="text-header" href="#" @click="navegarPara('Receitas')">Receitas</a>
+                <img src="../assets/botao-home.png" alt="">
+            </li>
+            <li>
+                <a class="text-header" href="#" @click="navegarPara('Despesas')">Despesas</a>
+                <img src="" alt="">
+            </li>
         </ul>
 
     </div>
 </template>
 
-<style></style>
+<style>
+.oi {
+    height: 100vh;
+}
+</style>
