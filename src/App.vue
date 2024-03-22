@@ -1,3 +1,4 @@
+
 <script >
 
 import Header from '@/components/Header.vue'
@@ -31,7 +32,7 @@ export default {
       <Header @navegar="componente = $event" />
     </div>
 
-    <div>
+    <div id="structure-conteudo">
       <KeepAlive>
         <component :is="componente" />
       </KeepAlive>
@@ -45,19 +46,27 @@ export default {
 <style >
 .structure {
   display: flex;
-  background: var(--bk-green);
+  /* background: var(--bk-green) !important; */
 
+  
+height: 100vh;
 }
 
 .structure-header {
-  background-color: #EDF3FB;
-  width: 100px;
+  height: 100%;
+  border-radius: 0 10px 10px 0; 
+
+  background-color: #fff;
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+  width: 5%;
   transition: width 0.1s; /* Adicione a propriedade e duração da transição aqui */
   transition-delay: 0.1s; /* Adicione o atraso da transição aqui */
+  /* display: flex;
+  justify-content: center; */
 }
 
 .structure-header:hover {
-  width: 260px;
+  width: 15%;
 }
 
 .structure-header:hover .text-header {
@@ -68,8 +77,24 @@ export default {
   display: none ;
 }
 
+ .structure-header .user-details{
+  display: none;
+}
+
+.structure-header:hover .user-details{
+  display: inline;
+}
+
 img{
   width: 10px;
+}
+
+#structure-conteudo {
+  margin-left: 1%;
+  /* background-color: #EDF3FB; */
+  height: 100%;
+  background: #EDF3FB !important;
+  width: 100% !important;
 }
 
 </style>

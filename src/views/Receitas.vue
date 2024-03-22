@@ -3,52 +3,24 @@
 </script>
 
 <template>
-    <div>
-        Receitas
-        
-        <div class="   h-100 p-5 bg-light border rounded-3">
-            <h2>Pesquisar Vagas</h2>
-            
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Título da vaga</label>
-                        <input type="text" class="form-control"
-                            placeholder="Pesquise por palavras chaves, por exemplo 'PHP', 'Pleno', 'Analista'">
-                        <small class="form-text text-muted">Informe palavras que estejam relacionadas com o título
-                            da vaga que você procura</small>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button class="btn btn-outline-dark mt-2" type="button">Buscar</button>
-                </div>
-            </div>
+     <div>
+        <h1> Receitas</h1>
+
+        <div class="teste">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, maiores tenetur non eaque fugit iste aliquam maxime at expedita cum cupiditate numquam quibusdam nihil soluta sapiente doloribus, rem itaque perspiciatis.
+       
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sunt architecto minima officiis facere asperiores beatae sed excepturi doloremque amet, fugiat rem! Aperiam corporis voluptatem, voluptatibus ut incidunt magni perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam qui commodi architecto, quod eius sit similique saepe recusandae excepturi praesentium necessitatibus ipsum sed rem eaque sint ratione illo hic aliquid.
         </div>
 
-
-        <div class="h-100 p-5 bg-light border rounded-3">
-            <h2>Pesquisar Vagas</h2>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Título da vaga</label>
-                        <input type="text" class="form-control"
-                            placeholder="Pesquise por palavras chaves, por exemplo 'PHP', 'Pleno', 'Analista'">
-                        <small class="form-text text-muted">Informe palavras que estejam relacionadas com o título
-                            da vaga que você procura</small>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button class="btn btn-outline-dark mt-2" type="button">Buscar</button>
-                </div>
-            </div>
-        </div>
-        
     </div>
 </template>
 
-<style></style>
+<style>
+
+.teste{
+    margin-top: 90px;
+}
+</style>
+
+
+   
