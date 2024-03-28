@@ -20,9 +20,15 @@ const props = defineProps({
 
 
 <template>
+
     <main>
         <section class="form-section">
-            <img src="/src/assets/logo.svg" />
+            <!-- <img src="/src/assets/logo.svg" /> -->
+            <!-- <h1>Finanço</h1> -->
+            <div class="logo-container">
+    <i class="fas fa-coins logo-icon"></i>
+    <h1 class="logo-text">Finanço</h1>
+  </div>
             <h2>{{ title }}</h2>
 
             <slot></slot>
@@ -85,8 +91,9 @@ margin: 20px 0 ;
 
         h1 {
             font-size: 32px;
-            font-weight: 500;
+            font-weight: 600;
             line-height: 48px;
+            color: #282447;
 
         }
     }
@@ -99,7 +106,7 @@ margin: 20px 0 ;
         button {
             background-color: var(--primary-color);
             width: 100%;
-            height: 50px;
+            height: 40px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
