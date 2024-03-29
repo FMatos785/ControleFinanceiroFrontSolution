@@ -1,5 +1,6 @@
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, defineEmits } from 'vue'
+import { useRouter } from 'vue-router';
 
 const props = defineProps({
     title: {
@@ -13,9 +14,16 @@ const props = defineProps({
     secundaryBtnText: {
         type: String,
         required: true
+    },
+    rota:{
+        type: String
     }
 });
 
+const router = useRouter();
+const navigateToSignup  = ( )=> {
+    router.push(props.rota);
+}
 </script>
 
 
@@ -25,15 +33,15 @@ const props = defineProps({
         <section class="form-section">
             <!-- <img src="/src/assets/logo.svg" /> -->
             <!-- <h1>Finanço</h1> -->
-            <div class="logo-container">
-    <i class="fas fa-coins logo-icon"></i>
-    <h1 class="logo-text">Finanço</h1>
-  </div>
+            <!-- <div class="logo-container">
+                <i class="fas fa-coins logo-icon"></i> -->
+                <h1 class="logo-text">Finanço</h1>
+            <!-- </div> -->
             <h2>{{ title }}</h2>
 
             <slot></slot>
 
-            <p class="forget"><a>Forget Password?</a></p>
+            <!-- <p class="forget"><a>Forget Password?</a></p> -->
             <button class="primaryBtnText">{{ primaryBtnText }}</button>
             <div class="or">
                 <div></div>
@@ -42,7 +50,7 @@ const props = defineProps({
                 </span>
                 <div></div>
             </div>
-            <button class="secundaryBtnText">{{ secundaryBtnText }}</button>
+            <button class="secundaryBtnText" @click="navigateToSignup">{{ secundaryBtnText }}</button>
         </section>
         <section class="img-section">
             <h1>Organize sua vida</h1>
@@ -62,7 +70,7 @@ main {
         font-size: 20px;
         font-weight: 600;
         line-height: 30px;
-margin: 20px 0 ;
+        margin: 20px 0;
     }
 
     p {
@@ -73,9 +81,9 @@ margin: 20px 0 ;
         color: var(--secondary-color)
     }
 
-    .forget {
+    /*.forget {
         margin-bottom: 20px;
-    }
+    }*/
 
     section {
         height: 100vh;
@@ -100,7 +108,6 @@ margin: 20px 0 ;
 
     .form-section {
         flex-grow: 0.3;
-        /* background-color: blue; */
         margin: 0 20px;
 
         button {

@@ -1,24 +1,24 @@
 <template>
     <div class="">
-        <defaultLogin title="Login into your account" primaryBtnText="Login now" secundaryBtnText="Signup now">
+        <autenticacao title="Login entre com sua conta" primaryBtnText="Entrar" secundaryBtnText="Cadastrar" rota="/cadastrar">
             <form>
-               <inputDados
+               <inputDefault
                type="email"
                forName="email"
                placeholder="cferreira@gmail.com.br"
                label="Email"
                >
                <img src="../../assets/email.svg" />
-               </inputDados>
+               </inputDefault>
 
-               <inputDados
+               <inputDefault
                type="password"
                forName="senha"
                placeholder="Entre com a senha"
                label="Senha"
                >
                <img src="../../assets/senha.svg" />
-               </inputDados>
+               </inputDefault>
 
                <!-- <inputDados
                type="password"
@@ -39,14 +39,14 @@
                </inputDados> -->
 
             </form>
-        </defaultLogin  >
+        </autenticacao  >
     </div>
 </template>
 
 
 <script setup>
-import defaultLogin from '../../components/defaultLoginLayout/Login.vue'
-import inputDados from '../../components/primaryInput/input.vue'
+import autenticacao from '../../components/autenticacaoLayout/UsuarioAutenticacao.vue'
+import inputDefault from '../../components/estruturaInput/input.vue'
 
 </script>
 
