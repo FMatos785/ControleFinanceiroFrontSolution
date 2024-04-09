@@ -20,10 +20,25 @@ const props = defineProps({
     }
 });
 
+
+// Defina o método emit usando defineEmits
+const emit  = defineEmits();
+
 const router = useRouter();
 const navigateToSignup  = ( )=> {
     router.push(props.rota);
 }
+
+const submitForm = () => {
+  try {
+    console.log('O formulário foi enviado!');
+    emit('formSubmitted');
+  } catch (error) {
+    console.error('Erro durante o envio do formulário:', error);
+  }
+};
+
+
 </script>
 
 
@@ -42,7 +57,7 @@ const navigateToSignup  = ( )=> {
             <slot></slot>
 
             <!-- <p class="forget"><a>Forget Password?</a></p> -->
-            <button class="primaryBtnText">{{ primaryBtnText }}</button>
+            <button class="primaryBtnText" type="submit"  @click="submitForm"  >{{ primaryBtnText }}</button>
             <div class="or">
                 <div></div>
                 <span>

@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, defineEmits  } from 'vue';
 
 const InputType = {
     Text: 'text',
@@ -26,9 +26,24 @@ const props = defineProps({
         required: true,
 
     }
-
-
 })
+
+
+
+const emit = defineEmits();
+
+const fieldValue = '';
+
+const emitChange = (event) => {
+    console.log(event)
+    console.log(event.target)
+    console.log(event.target.value)
+
+
+    console.log("opas")
+  emit('change', event.target.value);
+};
+
 </script>
 
 
@@ -36,7 +51,9 @@ const props = defineProps({
     <div class="form-elementos">
         <label :for="forName">{{ label }}</label>
         <div class="form-input-img">
-            <input :type="type" :id="forName" :placeholder="placeholder" required>
+            <!-- <input :type="type" :id="forName" :placeholder="placeholder"  required> -->
+            <input :type="type" :id="forName" :placeholder="placeholder" v-model="fieldValue"  @input="emitChange" required>
+
             <div class="form-img">
                 <slot></slot>
             </div>
