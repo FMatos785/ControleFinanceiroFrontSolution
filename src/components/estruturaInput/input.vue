@@ -25,6 +25,11 @@ const props = defineProps({
         type: String,
         required: true,
 
+    },
+    value: {
+        type: String,
+        required: false,
+
     }
 })
 
@@ -35,12 +40,12 @@ const emit = defineEmits();
 const fieldValue = '';
 
 const emitChange = (event) => {
-    console.log(event)
-    console.log(event.target)
-    console.log(event.target.value)
+    // console.log(event)
+    // console.log(event.target)
+    // console.log(event.target.value)
 
 
-    console.log("opas")
+    // console.log("opas")
   emit('change', event.target.value);
 };
 
@@ -52,7 +57,8 @@ const emitChange = (event) => {
         <label :for="forName">{{ label }}</label>
         <div class="form-input-img">
             <!-- <input :type="type" :id="forName" :placeholder="placeholder"  required> -->
-            <input :type="type" :id="forName" :placeholder="placeholder" v-model="fieldValue"  @input="emitChange" required>
+            <!-- <input :type="type" :id="forName" :placeholder="placeholder" v-model="fieldValue"  @input="emitChange" required> -->
+            <input :type="type" :id="forName" :placeholder="placeholder" :value="value"   @input="emitChange" required>
 
             <div class="form-img">
                 <slot></slot>

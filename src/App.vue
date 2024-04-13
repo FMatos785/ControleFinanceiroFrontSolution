@@ -3,17 +3,9 @@
 
 
 </script>
-
+<link rel="stylesheet" href="/css/estilo.css"></link>
 <template>
   <div>
-    <!-- <RouterLink to="/login">
-      login
-    </RouterLink>
-
-    <RouterLink to="/cadastrar">
-      cadastrar
-    </RouterLink> -->
-
     <RouterView/>
   </div>
 </template>

@@ -31,7 +31,7 @@ const navigateToSignup  = ( )=> {
 
 const submitForm = () => {
   try {
-    console.log('O formulário foi enviado!');
+    // console.log('O formulário foi enviado!');
     emit('formSubmitted');
   } catch (error) {
     console.error('Erro durante o envio do formulário:', error);
